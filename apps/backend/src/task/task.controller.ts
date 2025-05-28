@@ -37,7 +37,10 @@ export class TaskController {
   }
 
   @Post()
-  async create(@Body() body: { title: string; description: string }, @Req() req: any) {
+  async create(
+    @Body() body: { title: string; description: string },
+    @Req() req: any,
+  ) {
     const userId = req.user?.id;
     if (!userId) throw new UnauthorizedException();
     const data: Prisma.TaskCreateInput = {

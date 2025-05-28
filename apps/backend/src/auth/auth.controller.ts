@@ -1,4 +1,12 @@
-import { Controller, Post, Body, UnauthorizedException, Get, Req, UseGuards } from '@nestjs/common';
+import {
+  Controller,
+  Post,
+  Body,
+  UnauthorizedException,
+  Get,
+  Req,
+  UseGuards,
+} from '@nestjs/common';
 import { AuthService } from './auth.service';
 import { JwtAuthGuard } from './jwt-auth-guard';
 import { User } from '../generated/prisma';

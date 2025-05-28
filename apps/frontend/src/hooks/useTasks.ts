@@ -1,5 +1,10 @@
 import { useState, useEffect } from 'react';
-import { getTasks, createTask, updateTask, deleteTask } from '../services/tasks';
+import {
+  getTasks,
+  createTask,
+  updateTask,
+  deleteTask,
+} from '../services/tasks';
 import { Task } from '../types/task';
 
 export function useTasks() {
@@ -19,14 +24,17 @@ export function useTasks() {
     setTasks((prev) => [...prev, newTask]);
   }
 
-  async function editTask(id: number, updates: { title?: string; description?: string }) {
+  async function editTask(
+    id: number,
+    updates: { title?: string; description?: string },
+  ) {
     const updatedTask = await updateTask(id, updates);
-    setTasks((prev) => prev.map(t => t.id === id ? updatedTask : t));
+    setTasks((prev) => prev.map((t) => (t.id === id ? updatedTask : t)));
   }
 
   async function removeTask(id: number) {
     await deleteTask(id);
-    setTasks((prev) => prev.filter(t => t.id !== id));
+    setTasks((prev) => prev.filter((t) => t.id !== id));
   }
 
   return { tasks, addTask, editTask, removeTask };

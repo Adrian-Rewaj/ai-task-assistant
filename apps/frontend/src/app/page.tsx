@@ -32,7 +32,7 @@ export default function LoginPage() {
         <input
           type="email"
           value={email}
-          onChange={e => setEmail(e.target.value)}
+          onChange={(e) => setEmail(e.target.value)}
           required
           style={{ width: '100%', marginBottom: 12, padding: 8, fontSize: 16 }}
           autoComplete="email"
@@ -41,12 +41,15 @@ export default function LoginPage() {
         <input
           type="password"
           value={password}
-          onChange={e => setPassword(e.target.value)}
+          onChange={(e) => setPassword(e.target.value)}
           required
           style={{ width: '100%', marginBottom: 12, padding: 8, fontSize: 16 }}
           autoComplete="current-password"
         />
-        <button type="submit" style={{ width: '100%', padding: 10, fontSize: 16 }}>
+        <button
+          type="submit"
+          style={{ width: '100%', padding: 10, fontSize: 16 }}
+        >
           Zaloguj
         </button>
       </form>
@@ -54,7 +57,10 @@ export default function LoginPage() {
 
       <p style={{ marginTop: 20, fontSize: 14, textAlign: 'center' }}>
         Nie masz konta?{' '}
-        <a href="/register" style={{ color: '#0070f3', textDecoration: 'underline' }}>
+        <a
+          href="/register"
+          style={{ color: '#0070f3', textDecoration: 'underline' }}
+        >
           Zarejestruj się
         </a>
       </p>

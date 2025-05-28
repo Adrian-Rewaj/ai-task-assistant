@@ -53,7 +53,7 @@ export default function RegisterPage() {
           type="email"
           placeholder="Email"
           value={email}
-          onChange={e => setEmail(e.target.value)}
+          onChange={(e) => setEmail(e.target.value)}
           required
           style={{ width: '100%', marginBottom: 12, padding: 8, fontSize: 16 }}
           autoComplete="email"
@@ -62,22 +62,22 @@ export default function RegisterPage() {
           type="password"
           placeholder="Hasło"
           value={password}
-          onChange={e => setPassword(e.target.value)}
+          onChange={(e) => setPassword(e.target.value)}
           required
           style={{ width: '100%', marginBottom: 12, padding: 8, fontSize: 16 }}
           autoComplete="new-password"
           minLength={6} // warto wymusić minimalną długość
         />
-        <button type="submit" disabled={loading} style={{ width: '100%', padding: 10, fontSize: 16 }}>
+        <button
+          type="submit"
+          disabled={loading}
+          style={{ width: '100%', padding: 10, fontSize: 16 }}
+        >
           {loading ? 'Rejestracja...' : 'Zarejestruj się'}
         </button>
       </form>
 
-      {error && (
-        <p style={{ color: 'red', marginTop: 12 }}>
-          {error}
-        </p>
-      )}
+      {error && <p style={{ color: 'red', marginTop: 12 }}>{error}</p>}
     </div>
   );
 }

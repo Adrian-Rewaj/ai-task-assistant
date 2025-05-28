@@ -51,24 +51,27 @@ export default function TasksPage() {
         <input
           placeholder="Tytuł"
           value={title}
-          onChange={e => setTitle(e.target.value)}
+          onChange={(e) => setTitle(e.target.value)}
           required
           style={{ width: '100%', marginBottom: 8, padding: 8, fontSize: 16 }}
         />
         <textarea
           placeholder="Opis"
           value={description}
-          onChange={e => setDescription(e.target.value)}
+          onChange={(e) => setDescription(e.target.value)}
           style={{ width: '100%', marginBottom: 8, padding: 8, fontSize: 16 }}
         />
-        <button type="submit" style={{ padding: '10px 20px', fontSize: 16, cursor: 'pointer' }}>
+        <button
+          type="submit"
+          style={{ padding: '10px 20px', fontSize: 16, cursor: 'pointer' }}
+        >
           Dodaj
         </button>
       </form>
 
       <h2>Twoje taski</h2>
       <ul style={{ listStyle: 'none', padding: 0 }}>
-        {tasks.map(task => (
+        {tasks.map((task) => (
           <li
             key={task.id}
             style={{

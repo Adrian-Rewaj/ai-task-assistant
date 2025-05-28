@@ -1,5 +1,9 @@
 import { useState, useEffect } from 'react';
-import { login as apiLogin, logout as apiLogout, fetchCurrentUser } from '../services/auth';
+import {
+  login as apiLogin,
+  logout as apiLogout,
+  fetchCurrentUser,
+} from '../services/auth';
 import { User } from '../types/user';
 
 export function useAuth() {

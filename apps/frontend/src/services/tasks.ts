@@ -10,7 +10,10 @@ export async function createTask(title: string, description: string) {
   return response.data;
 }
 
-export async function updateTask(id: number, data: { title?: string; description?: string }) {
+export async function updateTask(
+  id: number,
+  data: { title?: string; description?: string },
+) {
   const response = await api.patch(`/tasks/${id}`, data);
   return response.data;
 }
