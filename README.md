@@ -18,7 +18,9 @@ apps/
 
 1. Install dependencies
 
+```
 npm install
+```
 
 Installs all dependencies across apps and packages.
 
@@ -32,17 +34,23 @@ For frontend: copy apps/frontend/.env.example to apps/frontend/.env.
 
 # Run all apps (backend + frontend) - turbo (in root)
 
+```
 npm run dev
+```
 
 # Run backend
 
+```
 cd apps/backend
 npm run dev
+```
 
 # Run frontend
 
+```
 cd apps/web
 npm run dev
+```
 
 # Description
 
