@@ -8,13 +8,10 @@ This project is in an early stage and provides a modular monorepo setup using mo
 
 This monorepo is powered by Turborepo and includes:
 
-```apps/
-├── web # Next.js frontend
+```
+apps/
+├── frontend # Next.js frontend
 ├── backend # Express.js backend (API)
-packages/
-├── ui # Shared React UI components
-├── eslint-config # Shared ESLint configuration
-├── tsconfig # Shared TypeScript config
 ```
 
 🚀 Getting Started
