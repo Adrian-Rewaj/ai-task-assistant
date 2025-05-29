@@ -32,13 +32,9 @@ For frontend: copy apps/frontend/.env.example to apps/frontend/.env.
 
 3. Run development servers
 
-Use turbo in root:
-
-# Run apps
+# Run all apps (backend + frontend) - turbo (in root)
 
 npm run dev
-
-or in separate terminals:
 
 # Run backend
 
