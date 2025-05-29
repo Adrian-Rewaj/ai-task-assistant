@@ -1,7 +1,8 @@
 import axios from 'axios';
+import { NEXT_API_URL } from '../config/config';
 
 const api = axios.create({
-  baseURL: 'http://localhost:3001', // backend URL
+  baseURL: NEXT_API_URL, // backend URL
 });
 
 api.interceptors.request.use((config) => {

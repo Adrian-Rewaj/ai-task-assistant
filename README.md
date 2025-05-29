@@ -1,84 +1,93 @@
-# Turborepo starter
+AI Task Assistant (WIP)
 
-This Turborepo starter is maintained by the Turborepo core team.
+AI Task Assistant is an AI-powered assistant designed to help manage and interact with tasks using natural language.
 
-## Using this example
+This project is in an early stage and provides a modular monorepo setup using modern tools like Turborepo, TypeScript, and Next.js.
 
-Run the following command:
+🧱 Project Structure
 
-```sh
-npx create-turbo@latest
-```
+This monorepo is powered by Turborepo and includes:
 
-## What's inside?
+apps/
+├── web # Next.js frontend
+├── backend # Express.js backend (API)
+packages/
+├── ui # Shared React UI components
+├── eslint-config # Shared ESLint configuration
+├── tsconfig # Shared TypeScript config
 
-This Turborepo includes the following packages/apps:
+🚀 Getting Started
 
-### Apps and Packages
+1. Install dependencies
 
-- `docs`: a [Next.js](https://nextjs.org/) app
-- `web`: another [Next.js](https://nextjs.org/) app
-- `@repo/ui`: a stub React component library shared by both `web` and `docs` applications
-- `@repo/eslint-config`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
-- `@repo/typescript-config`: `tsconfig.json`s used throughout the monorepo
+npm install
 
-Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
+Installs all dependencies across apps and packages.
 
-### Utilities
+2. Set up environment variables
 
-This Turborepo has some additional tools already setup for you:
+For backend: copy apps/backend/.env.example to apps/backend/.env.
 
-- [TypeScript](https://www.typescriptlang.org/) for static type checking
-- [ESLint](https://eslint.org/) for code linting
-- [Prettier](https://prettier.io) for code formatting
+For frontend: copy apps/frontend/.env.example to apps/frontend/.env.
 
-### Build
+3. Run development servers
 
-To build all apps and packages, run the following command:
+Use turbo in root:
 
-```
-cd my-turborepo
-pnpm build
-```
+# Run apps
 
-### Develop
+npm run dev
 
-To develop all apps and packages, run the following command:
+or in separate terminals:
 
-```
-cd my-turborepo
-pnpm dev
-```
+# Run backend
 
-### Remote Caching
+cd apps/backend
+npm run dev
 
-> [!TIP]
-> Vercel Remote Cache is free for all plans. Get started today at [vercel.com](https://vercel.com/signup?/signup?utm_source=remote-cache-sdk&utm_campaign=free_remote_cache).
+# Run frontend
 
-Turborepo can use a technique known as [Remote Caching](https://turborepo.com/docs/core-concepts/remote-caching) to share cache artifacts across machines, enabling you to share build caches with your team and CI/CD pipelines.
+cd apps/web
+npm run dev
 
-By default, Turborepo will cache locally. To enable Remote Caching you will need an account with Vercel. If you don't have an account you can [create one](https://vercel.com/signup?utm_source=turborepo-examples), then enter the following commands:
+⚙️ Features (Planned)
 
-```
-cd my-turborepo
-npx turbo login
-```
+✅ Monorepo structure with shared tooling
 
-This will authenticate the Turborepo CLI with your [Vercel account](https://vercel.com/docs/concepts/personal-accounts/overview).
+✅ Shared UI components and TypeScript config
 
-Next, you can link your Turborepo to your Remote Cache by running the following command from the root of your Turborepo:
+⏳ OpenAI API integration (WIP)
 
-```
-npx turbo link
-```
+⏳ Prompt/chat UI (WIP)
 
-## Useful Links
+⏳ Task CRUD functionality (WIP)
 
-Learn more about the power of Turborepo:
+⏳ Tests and CI/CD pipelines (WIP)
 
-- [Tasks](https://turborepo.com/docs/crafting-your-repository/running-tasks)
-- [Caching](https://turborepo.com/docs/crafting-your-repository/caching)
-- [Remote Caching](https://turborepo.com/docs/core-concepts/remote-caching)
-- [Filtering](https://turborepo.com/docs/crafting-your-repository/running-tasks#using-filters)
-- [Configuration Options](https://turborepo.com/docs/reference/configuration)
-- [CLI Usage](https://turborepo.com/docs/reference/command-line-reference)
+🧪 Tech Stack
+
+Next.js
+
+Express.js
+
+TypeScript
+
+Turborepo
+
+Tailwind CSS
+
+ESLint + Prettier
+
+📁 Environment Config
+
+Use .env in apps/frontend for frontend variables.
+
+Use .env in apps/backend for backend/API keys.
+
+💡 Notes
+
+This is a foundational setup for a scalable AI assistant app. Contributions and suggestions are welcome!
+
+📄 License
+
+MIT License
